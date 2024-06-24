@@ -1,0 +1,119 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.header {
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.header p {
+    font-size: 1.2em;
+}
+
+.main {
+    padding: 50px 0;
+}
+
+.intro {
+    background: #fff;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    line-height: 30px;
+}
+
+.goal {
+    background: #fff;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.goal h2 {
+    font-size: 1.5em;
+    color: #6a11cb;
+    margin-bottom: 10px;
+}
+
+.goal p {
+    font-size: 1em;
+}
+
+/* Footer Styles */
+.footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    padding: 20px 0;
+    justify-content: center;
+}
+
+.footer p {
+    font-size: 0.9em;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 2em;
+    }
+
+    .header p {
+        font-size: 1em;
+    }
+
+    .goal h2 {
+        font-size: 1.5em;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .goals {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .goal-div {
+        display: flex;
+        gap: 20px;
+    }
+}
