@@ -1,4 +1,4 @@
-/* Global Styles */
+/* Reset and Global Styles */
 * {
     margin: 0;
     padding: 0;
@@ -9,14 +9,17 @@ body {
     font-family: 'Arial', sans-serif;
     background-color: #f4f4f9;
     color: #333;
-    line-height: 1.5;
+    line-height: 1.6;
 }
 
 .container {
-    width: 100%;
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap:20px;
 }
 
 .header {
@@ -24,56 +27,50 @@ body {
     color: #fff;
     text-align: center;
     padding: 20px 0;
-    justify-content: center;
 }
 
 #slackProfilePicture {
-    border-radius: 50%;
     margin-bottom: 10px;
     margin-top: 10px;
-}
-
-#title {
-    font-size: 2.5em;
-    margin-bottom: 10px;
-}
-
-.header p {
-    font-size: 1.2em;
-    padding: 10px 0px;
-}
-
-#slackDisplayName{
-    color: black;
-    font-weight: 600;
-    font-style: italic;
-}
-
-.main {
-    padding: 50px 0;
+   width: 100%;
 }
 
 .intro {
     background: #fff;
-    margin-bottom: 20px;
     padding: 20px;
-    border-radius: 5px;
+    border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    line-height: 30px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.intro-text {
+    text-align: left;
+}
+
+.goals {
+    flex: 1;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .goal {
-    background: #fff;
     margin-bottom: 20px;
     padding: 20px;
-    border-radius: 5px;
+    border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    border:1px solid white;
+    border:1px solid gray;
 }
 
-.goal:hover {
-    border-color: black;
+.goal:hover{
+    border: 2px solid #333;
+}
+
+.goals h1{
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 .goal h2 {
@@ -86,74 +83,57 @@ body {
     font-size: 1em;
 }
 
-/* Footer Styles */
 .footer {
     background: #333;
     color: #fff;
     text-align: center;
-    align-items: center;
+    padding: 20px;
     display: flex;
     flex-direction: column;
-    padding: 20px 0px;
-    justify-content: center;
-    gap:10px
+    align-items: center;
+    justify-content: space-between;
 }
 
 .footer a {
     color: #fff;
     text-decoration: none;
-}
-
-.footer a:hover {
-    color: #6a11cb;
-}
-
-.footer p:hover {
-    color: #6a11cb;
+    margin: 0 10px;
 }
 
 /* Responsive Styles */
 @media (max-width: 768px) {
-    .header h1 {
-        font-size: 2em;
+    .container {
+        flex-direction: column;
+        align-items: center;
     }
 
-    .header p {
-        font-size: 1em;
+    .intro,
+    .goals {
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 20px;
     }
 
-    .goal h2 {
-        font-size: 1.2em;
+    #slackProfilePicture {
+        width: 100%;
     }
 }
 
 @media (min-width: 1024px) {
     .container {
-        display: flex;
-        flex-direction: column;
+        padding: 50px;
     }
 
-    .intro{
-        display: flex;
-        flex-direction: row;
-        gap:20px;
+    .intro {
+        max-width: 400px;
     }
-
 
     .goals {
-        display: flex;
-        flex-direction: column;
+        max-width: 700px;
     }
 
-    .goal-container {
+    .footer {
         display: flex;
-        gap: 20px;
+        flex-direction: row;
     }
-
-    .footer{
-       flex-direction: row;
-       gap:30px;
-       font-size: 15px;
-    }
- 
 }
